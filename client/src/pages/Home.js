@@ -14,6 +14,7 @@ export default function Home() {
           <li>Services</li>
           <li>About</li>
           <li>Contact</li>
+          <li>Login</li>
         </ul>
 
         {/* Language Dropdown */}
