@@ -1,0 +1,102 @@
+.home-container {
+  background: url("../assets/village-bg.jpg") no-repeat center center/cover;
+  background-size: cover;
+  height: 100vh;
+  color: white;
+  font-family: Arial, sans-serif;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.7);
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 50px;
+  background: rgba(0, 100, 0, 0.8);
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+}
+
+.nav-links li {
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.nav-links li:hover {
+  color: yellow;
+}
+
+/* Language Dropdown */
+.language-select {
+  padding: 5px;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+}
+
+/* Hero */
+.hero {
+  text-align: center;
+  margin-top: 80px;
+  padding: 0 20px;
+}
+
+.hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.about-text {
+  font-size: 1.2rem;
+  margin: 0 auto 40px auto;
+  max-width: 800px;
+}
+
+/* Info Section (Announcements + Meeting side by side) */
+.info-section {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.announcement-box,
+.meeting-box {
+  background: rgba(0, 0, 0, 0.6);
+  padding: 20px;
+  border-radius: 10px;
+  width: 300px;
+  text-align: left;
+}
+
+.meeting-box {
+  text-align: center;
+}
+
+.meeting-box button {
+  margin-top: 10px;
+  padding: 10px 20px;
+  background: #008000;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.meeting-box button:hover {
+  background: #005f00;
+}
+
+.announcement-box ul {
+  padding-left: 20px;
+}
