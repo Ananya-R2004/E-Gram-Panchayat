@@ -1,16 +1,3 @@
-Purpose of .env.example
-.env (Actual file) - Your local configuration (never shared with Git)
-
-Contains your personal database credentials
-
-Has your actual JWT secret key
-
-Added to .gitignore so it's never committed
-
-.env.example (Template file) - Shared with your team (committed to Git)
-
-Shows what environment variables are needed
-
-Provides the structure without real values
-
-Acts as documentation for setup
+MONGO_URI=mongodb+srv://abhinsamece_db_user:digitaldivide@cluster.nkbho2z.mongodb.net/panchayat?retryWrites=true&w=majority
+PORT=5000
+JWT_SECRET=aFc9fc6rced668af8412033d81c44aa3c08284263129442ac818d24d6acc2d8b64dc135161125bb77463b767c1cb9b6bfbb59cc557fear4d47edfd99397ab3c6
