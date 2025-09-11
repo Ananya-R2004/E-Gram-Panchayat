@@ -7,7 +7,6 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
-// Updated path - goes up one level to root, then into modules
 const authRoutes = require("../modules/authRoutes");
 app.use("/api/auth", authRoutes);
 
