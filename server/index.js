@@ -1,25 +1,32 @@
+// index.js
+require("dotenv").config();
 const express = require("express");
 const mongoose = require("mongoose");
-const dotenv = require("dotenv");
 const cors = require("cors");
-const passport = require("./modules/passport");
-
-dotenv.config();
+const authRoutes = require("./modules/authRoutes"); // Correct path
 
 const app = express();
-app.use(express.json());
 app.use(cors());
+app.use(express.json());
 
-// init passport
-app.use(passport.initialize());
+// Database Connection
+const connectDB = async () => {
+  try {
+    await mongoose.connect(process.env.MONGO_URI);
+    console.log("✅ MongoDB connected successfully");
+  } catch (err) {
+    console.error("❌ MongoDB connection failed:", err.message);
+    process.exit(1);
+  }
+};
 
-// routes
-app.use("/api/auth", require("./modules/authRoutes"));
+connectDB();
 
-mongoose
-  .connect(process.env.MONGO_URI)
-  .then(() => console.log("MongoDB connected"))
-  .catch((err) => console.error(err));
+// API Routes
+app.use("/api/auth", authRoutes);
 
+// Start the server
 const PORT = process.env.PORT || 5000;
-app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
+app.listen(PORT, () => {
+  console.log(`🚀 Server running on port ${PORT}`);
+});

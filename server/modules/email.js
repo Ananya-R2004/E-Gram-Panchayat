@@ -1,3 +1,4 @@
+// root/server/modules/email.js
 const nodemailer = require("nodemailer");
 
 const transporter = nodemailer.createTransport({

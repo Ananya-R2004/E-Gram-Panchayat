@@ -1,3 +1,0 @@
-MONGO_URI=mongodb+srv://abhinsamece_db_user:digitaldivide@cluster.nkbho2z.mongodb.net/panchayat?retryWrites=true&w=majority
-PORT=5000
-JWT_SECRET=aFc9fc6rced668af8412033d81c44aa3c08284263129442ac818d24d6acc2d8b64dc135161125bb77463b767c1cb9b6bfbb59cc557fear4d47edfd99397ab3c6
