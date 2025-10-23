@@ -1,6 +1,7 @@
 import Navbar from '@/components/Navbar'
 import Sidebar from '@/components/Sidebar'
 import React, { ReactNode } from 'react'
+import { Toaster } from "@/components/ui/toaster";
 
 const HomeLayout  = ({children}: {children:ReactNode} ) => {
   return (
