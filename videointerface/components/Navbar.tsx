@@ -12,7 +12,7 @@ const Navbar = () => {
           src="/icons/logo-egram.jpg"
           width={34}
           height={34}
-          alt="yoom logo"
+          alt="e-gram logo"
           className="max-sm:size-10"
         />
         <p className="text-[26px] font-extrabold text-white max-sm:hidden">

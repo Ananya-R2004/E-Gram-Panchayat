@@ -1,3 +1,4 @@
+// components/Loader.tsx (Updated)
 import Image from 'next/image';
 
 const Loader = () => {
@@ -8,6 +9,7 @@ const Loader = () => {
         alt="Loading..."
         width={50}
         height={50}
+        priority // <--- ADD THIS PROP
       />
     </div>
   );

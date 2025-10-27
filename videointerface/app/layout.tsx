@@ -1,44 +1,46 @@
-import { Inter } from "next/font/google";
-import "./globals.css";
-import { Metadata } from "next";
+// app/layout.tsx
 
-// Import ClerkProvider to wrap the application
-import { ClerkProvider } from "@clerk/nextjs"; 
-// Import custom Clerk theme utilities (if needed, assuming 'dark' theme)
-import { dark } from "@clerk/themes"; 
+import { ReactNode } from "react";
+import type { Metadata } from "next";
+import { ClerkProvider } from "@clerk/nextjs";
+import { Inter } from "next/font/google";
+
+import "@stream-io/video-react-sdk/dist/css/styles.css";
+import "react-datepicker/dist/react-datepicker.css";
+import "./globals.css";
+
+// 🛑 REMOVE THIS IMPORT:
+// import StreamVideoProvider from '@/providers/StreamClientProvider'; 
+
+// REQUIRED IMPORTS - these must be used as wrappers below
+import { Toaster } from "@/components/ui/toaster";
+import { ToastProvider } from "@/components/ui/use-toast"; 
+
 
 const inter = Inter({ subsets: ["latin"] });
 
-// Set dynamic title and description
-export const metadata: Metadata = {
-  title: "E-GramPanchayat Video Platform",
-  description: "A secure video conferencing platform for E-GramPanchayat services.",
-};
+// ... metadata ...
 
 export default function RootLayout({
   children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+}: Readonly<{ children: ReactNode }>) {
   return (
-    // 1. ClerkProvider MUST wrap the content to provide auth context
-    <ClerkProvider
-      // Optional: Apply a dark theme to Clerk components like UserButton, SignIn/Up pages
-      appearance={{
-        baseTheme: dark,
-        variables: {
-          colorPrimary: '#0E78F9', // Use blue-1 from your Tailwind config if defined
-          colorBackground: '#1C1F2E', // Use dark-1 from your Tailwind config
-          colorText: '#FFF',
-        }
-      }}
-    >
-      <html lang="en">
-        {/* 2. Apply dark background and font class to the body */}
+    <html lang="en">
+      <ClerkProvider
+        // ... appearance props ... (KEEP THIS)
+      >
         <body className={`${inter.className} bg-dark-2`}>
-          {children}
+          
+          <ToastProvider> 
+            
+            {/* 🛑 REMOVED StreamVideoProvider wrapper here */}
+            {children} 
+            <Toaster /> 
+
+          </ToastProvider>
+
         </body>
-      </html>
-    </ClerkProvider>
+      </ClerkProvider>
+    </html>
   );
 }
