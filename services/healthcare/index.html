@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-Gram Panchayat | Health Seva</title>
+
+    <!-- ✅ Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- ✅ Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="bg-gray-50 font-sans">
+
+    <!-- Header -->
+    <header class="bg-white shadow-md flex justify-between items-center p-4">
+        <h1 class="text-2xl font-bold flex items-center gap-2 text-green-700">
+            🏥 Health Seva
+        </h1>
+        <span class="text-sm bg-green-100 text-green-700 px-3 py-1 rounded-full">Safe & Healthy Village</span>
+    </header>
+
+    <!-- Tabs -->
+    <nav class="flex justify-center mt-6 space-x-4 border-b border-gray-200">
+        <button id="appointmentsTab" class="tab-button text-green-700 font-semibold border-b-2 border-green-700 pb-2">🔑 Appointments</button>
+        <button id="emergencyTab" class="tab-button text-gray-600 hover:text-green-700">🚨 Emergency Helpline</button>
+        <button id="awarenessTab" class="tab-button text-gray-600 hover:text-green-700">💡 Health Awareness</button>
+    </nav>
+
+    <!-- Appointments Section -->
+    <section id="appointments" class="p-6">
+        <div class="bg-white shadow rounded-2xl p-6 max-w-4xl mx-auto">
+            <h2 class="text-xl font-semibold mb-4">Find a Doctor or Facility</h2>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div>
+                    <label class="block text-gray-600 mb-1">Your Village/Place</label>
+                    <select id="place" class="w-full border rounded-lg p-2">
+                        <option>-- Select Place --</option>
+                        <option>Mandya</option>
+                        <option>Hassan</option>
+                        <option>Chikkamagaluru</option>
+                        <option>Udupi</option>
+                        <option>Davanagere</option>
+                    </select>
+                </div>
+
+                <div>
+                    <label class="block text-gray-600 mb-1">Required Speciality</label>
+                    <select id="speciality" class="w-full border rounded-lg p-2">
+                        <option>-- Select Speciality --</option>
+                        <option>General Physician</option>
+                        <option>Paediatrics</option>
+                        <option>Orthopaedics</option>
+                        <option>Gynecology</option>
+                        <option>Dental</option>
+                    </select>
+                </div>
+            </div>
+
+            <button id="searchBtn" class="mt-4 bg-green-600 hover:bg-green-700 text-white px-6 py-2 rounded-lg">🔍 Show Hospitals & Clinics</button>
+
+            <div id="results" class="mt-6 space-y-4"></div>
+        </div>
+    </section>
+
+    <!-- Emergency Section -->
+    <section id="emergency" class="hidden p-6">
+        <div class="max-w-4xl mx-auto bg-white shadow rounded-2xl p-6">
+            <h2 class="text-xl font-semibold mb-4">Emergency Contacts</h2>
+            <ul class="space-y-3">
+                <li><b>🚑 Ambulance:</b> <a href="tel:108" class="text-green-600">108</a></li>
+                <li><b>👮 Police:</b> <a href="tel:100" class="text-green-600">100</a></li>
+                <li><b>🔥 Fire:</b> <a href="tel:101" class="text-green-600">101</a></li>
+                <li><b>👩‍⚕️ Women Helpline:</b> <a href="tel:181" class="text-green-600">181</a></li>
+                <li><b>👶 Child Helpline:</b> <a href="tel:1098" class="text-green-600">1098</a></li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Awareness Section -->
+    <section id="awareness" class="hidden p-6">
+        <div class="max-w-4xl mx-auto bg-white shadow rounded-2xl p-6">
+            <h2 class="text-xl font-semibold mb-4">Village Health Awareness</h2>
+            <ul class="space-y-3 list-disc pl-6">
+                <li>💧 Drink clean and boiled water.</li>
+                <li>🧼 Wash hands regularly to prevent infections.</li>
+                <li>🦟 Use mosquito nets to avoid malaria and dengue.</li>
+                <li>👶 Ensure complete vaccination for children.</li>
+                <li>🥦 Eat balanced meals with local fresh produce.</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- ✅ External JS for Data -->
+    <script src="data/hospitals.js"></script>
+
+    <!-- ✅ Main Script -->
+    <script>
+        const tabs = {
+            appointmentsTab: "appointments",
+            emergencyTab: "emergency",
+            awarenessTab: "awareness",
+        };
+
+        Object.keys(tabs).forEach(id => {
+            document.getElementById(id).addEventListener("click", () => {
+                for (const [btn, section] of Object.entries(tabs)) {
+                    document.getElementById(section).classList.toggle("hidden", btn !== id);
+                    document.getElementById(btn).classList.toggle("text-green-700", btn === id);
+                    document.getElementById(btn).classList.toggle("font-semibold", btn === id);
+                }
+            });
+        });
+
+        const searchBtn = document.getElementById("searchBtn");
+        const resultsDiv = document.getElementById("results");
+
+        searchBtn.addEventListener("click", () => {
+            const place = document.getElementById("place").value;
+            const speciality = document.getElementById("speciality").value;
+            resultsDiv.innerHTML = "";
+
+            if (!place || !speciality || place === "-- Select Place --" || speciality === "-- Select Speciality --") {
+                resultsDiv.innerHTML = `<p class="text-red-600 font-medium">⚠️ Please select both place and speciality.</p>`;
+                return;
+            }
+
+            const matches = hospitalsData.filter(
+                h => h.place === place && h.speciality === speciality
+            );
+
+            if (matches.length === 0) {
+                resultsDiv.innerHTML = `<p class="text-gray-600">No hospitals found for your selection.</p>`;
+                return;
+            }
+
+            matches.forEach(h => {
+                const card = document.createElement("div");
+                card.className = "p-4 border rounded-lg shadow-sm bg-green-50";
+                card.innerHTML = `
+                    <h3 class="font-semibold text-lg text-green-700">${h.name}</h3>
+                    <p>${h.address}</p>
+                    <p class="text-sm text-gray-600">Contact: <a href="tel:${h.contact}" class="text-green-600">${h.contact}</a></p>
+                    <a href="${h.link}" target="_blank" class="mt-2 inline-block bg-green-600 hover:bg-green-700 text-white px-4 py-1 rounded-lg">Book Appointment</a>
+                `;
+                resultsDiv.appendChild(card);
+            });
+        });
+    </script>
+</body>
+</html>
