@@ -1,6 +1,8 @@
 import { Card } from "@/components/ui/card";
 import { Users, Target, Shield, Award } from "lucide-react";
 
+// The 'stats' array is kept, but its rendering is removed.
+// You could remove the array too, but keeping it for now is harmless.
 const stats = [
   { icon: Users, label: "Active Members", value: "10,000+" },
   { icon: Target, label: "Services Delivered", value: "50,000+" },
@@ -21,7 +23,11 @@ export default function About() {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-12 items-center mb-16">
+        {/* MODIFICATION: 
+          1. Change grid-cols-2 to grid-cols-1 to remove the right-hand column space.
+          2. REMOVE the entire <div className="grid grid-cols-2 gap-6"> block.
+        */}
+        <div className="grid md:grid-cols-1 gap-12 items-center mb-16">
           <div>
             <h3 className="font-serif text-2xl font-semibold text-foreground mb-4">
               Our Mission
@@ -37,19 +43,15 @@ export default function About() {
             </p>
           </div>
           
+          {/* *** DELETED THE ENTIRE STATS BLOCK HERE ***
           <div className="grid grid-cols-2 gap-6">
             {stats.map((stat) => (
               <Card key={stat.label} className="p-6 text-center">
-                <stat.icon className="h-8 w-8 mx-auto mb-3 text-primary" />
-                <div className="text-3xl font-bold text-foreground mb-1">
-                  {stat.value}
-                </div>
-                <div className="text-sm text-muted-foreground">
-                  {stat.label}
-                </div>
+                ... (stat content)
               </Card>
             ))}
           </div>
+          */}
         </div>
 
         <Card className="p-8 bg-primary text-primary-foreground">

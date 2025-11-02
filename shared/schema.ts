@@ -1,18 +1,30 @@
-import { sql } from "drizzle-orm";
-import { pgTable, text, varchar } from "drizzle-orm/pg-core";
-import { createInsertSchema } from "drizzle-zod";
-import { z } from "zod";
+// shared/schema.ts
+export type UserRole = "villager" | "admin";
 
-export const users = pgTable("users", {
-  id: varchar("id").primaryKey().default(sql`gen_random_uuid()`),
-  username: text("username").notNull().unique(),
-  password: text("password").notNull(),
-});
+/* -------------------- ANNOUNCEMENTS -------------------- */
+export interface Announcement {
+  _id?: string; // ✅ optional since it's created by MongoDB
+  title: string;
+  description: string;
+  date?: string;
+  postedBy?: string;
+  image?: string;
+}
 
-export const insertUserSchema = createInsertSchema(users).pick({
-  username: true,
-  password: true,
-});
+export type InsertAnnouncement = Omit<Announcement, "_id" | "date">;
 
-export type InsertUser = z.infer<typeof insertUserSchema>;
-export type User = typeof users.$inferSelect;
+/* -------------------- VILLAGES -------------------- */
+export interface Village {
+  _id?: string; // ✅ optional now
+  name: string;
+  population: number;
+  area: string;
+  sarpanch: string;
+  secretary: string;
+  contactPhone: string;
+  contactEmail: string;
+  facilities: string;
+  description?: string;
+}
+
+export type InsertVillage = Omit<Village, "_id">;

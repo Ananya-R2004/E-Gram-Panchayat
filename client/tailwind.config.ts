@@ -1,8 +1,12 @@
+// Path: client/tailwind.config.ts
+
 import type { Config } from "tailwindcss";
 
 export default {
   darkMode: ["class"],
-  content: ["./client/index.html", "./client/src/**/*.{js,jsx,ts,tsx}"],
+  // --- FIX APPLIED HERE ---
+  content: ["./index.html", "./src/**/*.{js,jsx,ts,tsx}"],
+  // ------------------------
   theme: {
     extend: {
       borderRadius: {

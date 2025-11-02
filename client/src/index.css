@@ -270,6 +270,19 @@
  */
 @layer utilities {
 
+  /* ⭐️ Marquee Animation Keyframes for Announcements */
+  @keyframes marquee {
+    0%   { transform: translateX(100%); } /* Starts off-screen to the right */
+    100% { transform: translateX(-100%); } /* Ends off-screen to the left */
+  }
+
+  .animate-marquee {
+    display: flex;
+    animation: marquee 30s linear infinite; /* Adjust time for speed */
+    animation-delay: 1s;
+  }
+  /* ⭐️ END FIX */
+
   /* Hide ugly search cancel button in Chrome until we can style it properly */
   input[type="search"]::-webkit-search-cancel-button {
     @apply hidden;
@@ -283,19 +296,20 @@
   }
 
   /* .no-default-hover-elevate/no-default-active-elevate is an escape hatch so consumers of
-   * buttons/badges can remove the automatic brightness adjustment on interactions
-   * and program their own. */
-  .no-default-hover-elevate {}
+    * buttons/badges can remove the automatic brightness adjustment on interactions
+    * and program their own. */
+  /* ✅ FIX: Removed empty braces to resolve 'emptyRules' warning */
+  .no-default-hover-elevate 
 
-  .no-default-active-elevate {}
+  .no-default-active-elevate 
 
 
   /**
-   * Toggleable backgrounds go behind the content. Hoverable/active goes on top.
-   * This way they can stack/compound. Both will overlap the parent's borders!
-   * So borders will be automatically adjusted both on toggle, and hover/active,
-   * and they will be compounded.
-   */
+    * Toggleable backgrounds go behind the content. Hoverable/active goes on top.
+    * This way they can stack/compound. Both will overlap the parent's borders!
+    * So borders will be automatically adjusted both on toggle, and hover/active,
+    * and they will be compounded.
+    */
   .toggle-elevate::before,
   .toggle-elevate-2::before {
     content: "";

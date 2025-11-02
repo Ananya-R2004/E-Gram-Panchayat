@@ -32,11 +32,12 @@ export default function Hero() {
           <Button
             size="lg"
             variant="default"
-            onClick={() => scrollToSection("#register")}
+            // MODIFICATION: Changed to scroll to the About section or redirect to /register
+            onClick={() => scrollToSection("#about")} 
             className="min-w-40"
             data-testid="button-hero-register"
           >
-            Get Started
+            Explore Services
           </Button>
           <Button
             size="lg"

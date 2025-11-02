@@ -1,5 +1,5 @@
 {
-  "include": ["client/src/**/*", "shared/**/*", "server/**/*"],
+  "include": ["src/**/*"],
   "exclude": ["node_modules", "build", "dist", "**/*.test.ts"],
   "compilerOptions": {
     "incremental": true,
@@ -16,8 +16,10 @@
     "baseUrl": ".",
     "types": ["node", "vite/client"],
     "paths": {
-      "@/*": ["./client/src/*"],
-      "@shared/*": ["./shared/*"]
+      // Adjusted client path: relative to client folder
+      "@/*": ["./src/*"], 
+      // Paths to 'shared' need to point up one level, unless shared is inside client
+      "@shared/*": ["../shared/*"] 
     }
   }
 }
