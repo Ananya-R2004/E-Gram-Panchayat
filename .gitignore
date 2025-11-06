@@ -1,8 +1,11 @@
-node_modules/
-.env
-client/node_modules/
-server/node_modules/
+
 build/
 dist/
 .DS_Store
 EOF
+
+dist
+.DS_Store
+server/public
+vite.config.ts.*
+*.tar.gz

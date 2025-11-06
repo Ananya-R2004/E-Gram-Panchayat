@@ -1,0 +1,8 @@
+{
+  "scripts": {
+    "install:all": "npm install --prefix client && npm install --prefix server",
+    "client": "npm run dev --prefix client",
+    "server": "npm run dev --prefix server",
+    "dev": "npm-run-all --parallel client server"
+  }
+}

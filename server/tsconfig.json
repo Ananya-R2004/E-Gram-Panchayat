@@ -1,0 +1,26 @@
+// Path: server/tsconfig.json
+
+{
+  "include": ["**/*"],
+  "exclude": ["node_modules", "dist", "build", "**/*.test.ts"],
+  "compilerOptions": {
+    "incremental": true,
+    // tsBuildInfoFile path updated to point outside of the server node_modules
+    "tsBuildInfoFile": "../node_modules/typescript/tsbuildinfo-server", 
+    "target": "es2022",
+    "module": "NodeNext",
+    "moduleResolution": "NodeNext",
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "strict": true,
+    "skipLibCheck": true,
+    "outDir": "./dist",
+    "lib": ["es2022"],
+    "baseUrl": ".",
+    "types": ["node"],
+    "paths": {
+      // Paths to 'shared' need to point up one level, assuming 'shared' is at the root
+      "@shared/*": ["../shared/*"] 
+    }
+  }
+}
