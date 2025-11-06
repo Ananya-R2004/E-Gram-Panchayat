@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-Gram Panchayat Education Interface</title>
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <!-- Custom Styling -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-gray-50 min-h-screen flex flex-col items-center p-6 font-[Inter]">
+
+    <!-- Header -->
+    <header class="text-center mb-8">
+        <h1 class="text-3xl md:text-4xl font-extrabold text-blue-800">
+            <i class="fas fa-graduation-cap mr-2"></i> Skill Development & Learning Portal
+        </h1>
+        <p class="text-gray-600 mt-2">Choose a learning track to explore resources</p>
+    </header>
+
+    <!-- Buttons -->
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 w-full max-w-3xl mb-10">
+        <button id="technical-btn"
+            class="category bg-white p-6 rounded-xl border-t-4 border-teal-500 hover:bg-teal-50 transition shadow-md">
+            <div class="flex items-center space-x-4">
+                <i class="fas fa-laptop-code text-4xl text-teal-600"></i>
+                <div>
+                    <h2 class="text-2xl font-bold text-teal-700">Technical Skills</h2>
+                    <p class="text-gray-500 mt-1 text-sm">IT, data entry, coding, digital literacy, and repair.</p>
+                </div>
+            </div>
+        </button>
+
+        <button id="nontechnical-btn"
+            class="category bg-white p-6 rounded-xl border-t-4 border-indigo-500 hover:bg-indigo-50 transition shadow-md">
+            <div class="flex items-center space-x-4">
+                <i class="fas fa-handshake text-4xl text-indigo-600"></i>
+                <div>
+                    <h2 class="text-2xl font-bold text-indigo-700">Non-Technical / Life Skills</h2>
+                    <p class="text-gray-500 mt-1 text-sm">Entrepreneurship, communication, financial literacy.</p>
+                </div>
+            </div>
+        </button>
+    </div>
+
+    <!-- Results -->
+    <section id="results-section"
+        class="bg-white p-6 rounded-xl shadow-md border border-gray-100 w-full max-w-3xl">
+        <h3 id="results-title" class="text-2xl font-semibold text-gray-800 mb-4 border-b pb-2">
+            Select a Track to View Resources
+        </h3>
+        <div id="loading" class="hidden text-center py-6">
+            <i class="fas fa-spinner fa-spin text-3xl text-blue-500"></i>
+            <p class="text-gray-500 mt-2">Fetching the best free learning resources...</p>
+        </div>
+        <div id="resources" class="space-y-4">
+            <p class="text-gray-500">Click a category above to view recommended free learning resources.</p>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
