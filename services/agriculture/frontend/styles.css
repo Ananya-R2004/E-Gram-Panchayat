@@ -1,0 +1,67 @@
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  background: #f4f7f8;
+  color: #333;
+}
+.container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 20px;
+}
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #2a9d8f;
+}
+.card {
+  background: white;
+  padding: 20px;
+  margin: 10px;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+.weather-card {
+  text-align: center;
+}
+.weather-card h2 {
+  margin: 10px 0;
+  color: #264653;
+}
+input, select {
+  padding: 8px;
+  margin-right: 10px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+button {
+  padding: 8px 12px;
+  border: none;
+  background: #2a9d8f;
+  color: white;
+  border-radius: 6px;
+  cursor: pointer;
+}
+button:hover {
+  background: #21867a;
+}
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(280px,1fr));
+  gap: 15px;
+}
+.vendor-card, .crop-card {
+  padding: 15px;
+}
+.vendor-card h3, .crop-card h3 {
+  margin: 0 0 10px 0;
+}
+.vendor-card p, .crop-card p {
+  margin: 5px 0;
+  font-size: 0.9rem;
+}
+.map-link {
+  color: #e76f51;
+  text-decoration: none;
+  font-weight: bold;
+}
