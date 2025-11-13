@@ -9,41 +9,65 @@ export default function App() {
   const [search, setSearch] = useState('');
   const [category, setCategory] = useState('All');
 
-  const categories = ['All', 'Farmers','Women','Children','Students','Physically Disabled','Widows','Senior Citizens'];
+  const categories = [
+    'All',
+    'Farmers',
+    'Women',
+    'Children',
+    'Students',
+    'Physically Disabled',
+    'Widows',
+    'Senior Citizens',
+  ];
 
+  // ✅ Fetch data from backend
   useEffect(() => {
-    axios.get('http://localhost:5003/api/schemes')
-      .then(res => {
+    axios
+      .get('http://localhost:5003/schemes') // 🔥 fixed endpoint (no /api)
+      .then((res) => {
         setSchemes(res.data);
         setFiltered(res.data);
       })
-      .catch(err => console.error(err));
+      .catch((err) => console.error('Error fetching schemes:', err));
   }, []);
 
+  // ✅ Apply search + filter
   useEffect(() => {
-    let r = schemes;
+    let results = schemes;
+
     if (category !== 'All') {
-      r = r.filter(s => {
-        const cat = s.category.toLowerCase();
-        if (category === 'Physically Disabled') return cat.includes('disabled') || cat.includes('physically');
-        if (category === 'Senior Citizens') return cat.includes('senior') || cat.includes('citizen');
+      results = results.filter((scheme) => {
+        const cat = scheme.category.toLowerCase();
+        if (category === 'Physically Disabled')
+          return cat.includes('disabled') || cat.includes('physically');
+        if (category === 'Senior Citizens')
+          return cat.includes('senior') || cat.includes('citizen');
         return cat === category.toLowerCase();
       });
     }
+
     if (search.trim()) {
-      const q = search.toLowerCase();
-      r = r.filter(s => (s.name && s.name.toLowerCase().includes(q)) || (s.eligibility && s.eligibility.toLowerCase().includes(q)));
+      const query = search.toLowerCase();
+      results = results.filter(
+        (scheme) =>
+          (scheme.name && scheme.name.toLowerCase().includes(query)) ||
+          (scheme.eligibility && scheme.eligibility.toLowerCase().includes(query))
+      );
     }
-    setFiltered(r);
+
+    setFiltered(results);
   }, [search, category, schemes]);
 
   return (
     <div className="container">
       <header>
         <h1>Schemes & Policy</h1>
-        <p className="subtitle">Find government & private schemes by beneficiary type</p>
+        <p className="subtitle">
+          Find government & private schemes by beneficiary type
+        </p>
       </header>
 
+      {/* ✅ Search + Filter */}
       <SearchFilter
         categories={categories}
         search={search}
@@ -52,8 +76,15 @@ export default function App() {
         setCategory={setCategory}
       />
 
+      {/* ✅ Scheme list */}
       <div className="grid">
-        {filtered.length === 0 ? <p className="no">No schemes found.</p> : filtered.map(s => <SchemeCard key={s.id} scheme={s} />)}
+        {filtered.length === 0 ? (
+          <p className="no">No schemes found.</p>
+        ) : (
+          filtered.map((scheme) => (
+            <SchemeCard key={scheme.id} scheme={scheme} />
+          ))
+        )}
       </div>
     </div>
   );

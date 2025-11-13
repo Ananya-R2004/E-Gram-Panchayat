@@ -2,18 +2,14 @@ import React from 'react';
 
 export default function SchemeCard({ scheme }) {
   return (
-    <div className="card">
-      <div className="card-head">
-        <h3>{scheme.name}</h3>
-        <span className="cat">{scheme.category}</span>
-      </div>
-      <div className="card-body">
-        <p><strong>Eligibility:</strong> {scheme.eligibility}</p>
-        <p><strong>Benefits:</strong> {scheme.benefits}</p>
-        <p><strong>Process:</strong> {scheme.process}</p>
-        <p><strong>Documents:</strong> {Array.isArray(scheme.documents) ? scheme.documents.join(', ') : scheme.documents}</p>
-        <p><strong>Contact:</strong> <a href={scheme.contact} target="_blank" rel="noreferrer">{scheme.contact}</a></p>
-      </div>
+    <div className="scheme-card">
+      <h2>{scheme.name}</h2>
+      <p><strong>Category:</strong> {scheme.category}</p>
+      <p><strong>Eligibility:</strong> {scheme.eligibility}</p>
+      <p><strong>Benefits:</strong> {scheme.benefits}</p>
+      <p><strong>Application Process:</strong> {scheme.applicationProcess}</p>
+      <p><strong>Required Documents:</strong> {scheme.documents}</p>
+      <p><strong>Contact:</strong> {scheme.contact}</p>
     </div>
   );
 }

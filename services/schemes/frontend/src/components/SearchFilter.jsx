@@ -2,24 +2,28 @@ import React from 'react';
 
 export default function SearchFilter({ categories, search, setSearch, category, setCategory }) {
   return (
-    <div className="controls">
+    <div className="filter-bar">
+      {/* 🔍 Search bar */}
       <input
-        className="search"
-        placeholder="Search schemes by name or eligibility..."
+        type="text"
+        placeholder="Search schemes..."
         value={search}
-        onChange={e => setSearch(e.target.value)}
+        onChange={(e) => setSearch(e.target.value)}
+        className="search-input"
       />
-      <div className="category-buttons">
-        {categories.map(c => (
-          <button
-            key={c}
-            className={`cat-btn ${category === c ? 'active' : ''}`}
-            onClick={() => setCategory(c)}
-          >
+
+      {/* 📂 Category dropdown */}
+      <select
+        value={category}
+        onChange={(e) => setCategory(e.target.value)}
+        className="category-select"
+      >
+        {categories.map((c) => (
+          <option key={c} value={c}>
             {c}
-          </button>
+          </option>
         ))}
-      </div>
+      </select>
     </div>
   );
 }

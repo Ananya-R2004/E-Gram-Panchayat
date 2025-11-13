@@ -1,0 +1,57 @@
+{
+  "contacts": {
+    "national_ambulance": "+91-102",
+    "police": "100",
+    "fire": "101",
+    "poison_control": "+91-11-1066",
+    "nearest_blood_bank_helper": "Local Hospital Directory"
+  },
+  "instructions": {
+    "heart_attack": [
+      "Call emergency services immediately (ambulance).",
+      "Have the person sit/lie down in a comfortable position; loosen tight clothing.",
+      "If the person is conscious and not allergic, give 1 adult aspirin (300 mg) to chew, unless contraindicated.",
+      "Begin CPR if the person becomes unresponsive and is not breathing normally.",
+      "If trained, use an AED if available."
+    ],
+    "stroke": [
+      "Call emergency services immediately \u2014 note the time symptoms began.",
+      "Keep the person calm and lying down with head slightly elevated.",
+      "Do not give food, drink or medications unless directed by a professional.",
+      "Monitor breathing and consciousness; begin CPR if needed."
+    ],
+    "severe_bleeding": [
+      "Apply direct pressure to wound with clean cloth or bandage.",
+      "Elevate the bleeding area above heart level if possible.",
+      "Do not remove embedded objects \u2014 apply padding around them.",
+      "Seek emergency medical help immediately."
+    ],
+    "burns": [
+      "Cool the burn under running water for 10\u201320 minutes.",
+      "Remove constricting items (rings, watches) before swelling starts.",
+      "Cover with sterile, non-fluffy dressing or cling film.",
+      "Do not apply creams, oils, or ice directly to severe burns."
+    ],
+    "fracture": [
+      "Immobilize the limb; do not try to realign bones.",
+      "Apply a splint above and below the fracture if possible.",
+      "Control any bleeding with direct pressure.",
+      "Seek urgent medical care."
+    ],
+    "choking": [
+      "If the person can cough or speak, encourage coughing.",
+      "If they cannot breathe, perform abdominal thrusts (Heimlich) on conscious adults.",
+      "For unconscious patients, start CPR and call emergency services."
+    ],
+    "allergic_reaction": [
+      "Call emergency services immediately for severe reactions (difficulty breathing, swelling).",
+      "If the person has an epinephrine auto-injector (EpiPen), use it as prescribed.",
+      "Lay the person flat; elevate legs unless this makes breathing worse."
+    ],
+    "drowning": [
+      "Remove the person from water and call emergency services.",
+      "If trained, begin rescue breaths and CPR as needed.",
+      "Keep the person warm and monitor breathing until help arrives."
+    ]
+  }
+}
