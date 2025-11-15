@@ -1,32 +1,182 @@
 [
-  {"id":1,"name":"Vendor A","address":"Bangalore Central","lat":12.9716,"lng":77.5946,"contact":"9876543210","crops":["Tomato","Onion"]},
-  {"id":2,"name":"Vendor B","address":"Whitefield","lat":12.9690,"lng":77.7500,"contact":"9876543211","crops":["Potato","Tomato"]},
-  {"id":3,"name":"Vendor C","address":"Indiranagar","lat":12.9718,"lng":77.6412,"contact":"9876543212","crops":["Banana"]},
-  {"id":4,"name":"Vendor D","address":"Jayanagar","lat":12.9250,"lng":77.5938,"contact":"9876543213","crops":["Mango"]},
-  {"id":5,"name":"Vendor E","address":"Koramangala","lat":12.9352,"lng":77.6245,"contact":"9876543214","crops":["Rice"]},
-  {"id":6,"name":"Vendor F","address":"HSR Layout","lat":12.9141,"lng":77.6360,"contact":"9876543215","crops":["Maize"]},
-  {"id":7,"name":"Vendor G","address":"MG Road","lat":12.9763,"lng":77.6033,"contact":"9876543216","crops":["Tomato"]},
-  {"id":8,"name":"Vendor H","address":"Electronic City","lat":12.8396,"lng":77.6770,"contact":"9876543217","crops":["Onion"]},
-  {"id":9,"name":"Vendor I","address":"Banaswadi","lat":13.0104,"lng":77.6320,"contact":"9876543218","crops":["Potato"]},
-  {"id":10,"name":"Vendor J","address":"Rajajinagar","lat":13.0141,"lng":77.5620,"contact":"9876543219","crops":["Tomato"]},
-  {"id":11,"name":"Vendor K","address":"Yelahanka","lat":13.0840,"lng":77.5930,"contact":"9876543220","crops":["Banana"]},
-  {"id":12,"name":"Vendor L","address":"Kengeri","lat":12.9142,"lng":77.4836,"contact":"9876543221","crops":["Mango"]},
-  {"id":13,"name":"Vendor M","address":"Hebbal","lat":13.0285,"lng":77.5898,"contact":"9876543222","crops":["Rice"]},
-  {"id":14,"name":"Vendor N","address":"Sahakara Nagar","lat":13.0371,"lng":77.5765,"contact":"9876543223","crops":["Maize"]},
-  {"id":15,"name":"Vendor O","address":"Kanakapura Road","lat":12.8455,"lng":77.5690,"contact":"9876543224","crops":["Tomato"]},
-  {"id":16,"name":"Vendor P","address":"HSR Layout","lat":12.9141,"lng":77.6360,"contact":"9876543225","crops":["Onion"]},
-  {"id":17,"name":"Vendor Q","address":"Bellandur","lat":12.9250,"lng":77.6820,"contact":"9876543226","crops":["Potato"]},
-  {"id":18,"name":"Vendor R","address":"Whitefield","lat":12.9690,"lng":77.7500,"contact":"9876543227","crops":["Banana"]},
-  {"id":19,"name":"Vendor S","address":"Marathahalli","lat":12.9744,"lng":77.7367,"contact":"9876543228","crops":["Mango"]},
-  {"id":20,"name":"Vendor T","address":"Koramangala","lat":12.9352,"lng":77.6245,"contact":"9876543229","crops":["Rice"]},
-  {"id":21,"name":"Vendor U","address":"Indiranagar","lat":12.9718,"lng":77.6412,"contact":"9876543230","crops":["Maize"]},
-  {"id":22,"name":"Vendor V","address":"Jayanagar","lat":12.9250,"lng":77.5938,"contact":"9876543231","crops":["Tomato"]},
-  {"id":23,"name":"Vendor W","address":"MG Road","lat":12.9763,"lng":77.6033,"contact":"9876543232","crops":["Onion"]},
-  {"id":24,"name":"Vendor X","address":"Electronic City","lat":12.8396,"lng":77.6770,"contact":"9876543233","crops":["Potato"]},
-  {"id":25,"name":"Vendor Y","address":"Bangalore East","lat":12.9800,"lng":77.6500,"contact":"9876543234","crops":["Banana"]},
-  {"id":26,"name":"Vendor Z","address":"Bangalore West","lat":12.9700,"lng":77.5800,"contact":"9876543235","crops":["Mango"]},
-  {"id":27,"name":"Vendor AA","address":"Yelahanka","lat":13.0840,"lng":77.5930,"contact":"9876543236","crops":["Rice"]},
-  {"id":28,"name":"Vendor AB","address":"Hebbal","lat":13.0285,"lng":77.5898,"contact":"9876543237","crops":["Maize"]},
-  {"id":29,"name":"Vendor AC","address":"Kanakapura","lat":12.8455,"lng":77.5690,"contact":"9876543238","crops":["Tomato"]},
-  {"id":30,"name":"Vendor AD","address":"Sahakara Nagar","lat":13.0371,"lng":77.5765,"contact":"9876543239","crops":["Onion"]}
+  {
+    "id": 1,
+    "name": "GreenFresh Wholesale Market",
+    "address": "KR Market, Bangalore",
+    "lat": 12.9640,
+    "lng": 77.5800,
+    "contact": "9845012345",
+    "crops": ["Tomato", "Onion"]
+  },
+  {
+    "id": 2,
+    "name": "Whitefield Agro Traders",
+    "address": "Whitefield, Bangalore",
+    "lat": 12.9698,
+    "lng": 77.7500,
+    "contact": "9945098765",
+    "crops": ["Potato", "Tomato"]
+  },
+  {
+    "id": 3,
+    "name": "Indiranagar Fruit Point",
+    "address": "Indiranagar 100ft Road",
+    "lat": 12.9721,
+    "lng": 77.6408,
+    "contact": "9632587410",
+    "crops": ["Banana"]
+  },
+  {
+    "id": 4,
+    "name": "Jayanagar Mango Distributors",
+    "address": "Jayanagar 4th Block",
+    "lat": 12.9300,
+    "lng": 77.5800,
+    "contact": "9988776655",
+    "crops": ["Mango"]
+  },
+  {
+    "id": 5,
+    "name": "Koramangala Rice Suppliers",
+    "address": "Koramangala 6th Block",
+    "lat": 12.9352,
+    "lng": 77.6245,
+    "contact": "9745612345",
+    "crops": ["Rice"]
+  },
+  {
+    "id": 6,
+    "name": "HSR Maize Dealers",
+    "address": "HSR Layout Sector 2",
+    "lat": 12.9141,
+    "lng": 77.6360,
+    "contact": "9198765432",
+    "crops": ["Maize"]
+  },
+  {
+    "id": 7,
+    "name": "MG Road Vegetable Hub",
+    "address": "MG Road, Bangalore",
+    "lat": 12.9763,
+    "lng": 77.6033,
+    "contact": "9036012345",
+    "crops": ["Tomato"]
+  },
+  {
+    "id": 8,
+    "name": "Electronic City Onion Depot",
+    "address": "Electronic City Phase 1",
+    "lat": 12.8396,
+    "lng": 77.6770,
+    "contact": "8899776655",
+    "crops": ["Onion"]
+  },
+  {
+    "id": 9,
+    "name": "Banaswadi Potato Yard",
+    "address": "Banaswadi Main Road",
+    "lat": 13.0104,
+    "lng": 77.6320,
+    "contact": "9812345670",
+    "crops": ["Potato"]
+  },
+  {
+    "id": 10,
+    "name": "Rajajinagar Tomato Centre",
+    "address": "Rajajinagar 1st Block",
+    "lat": 13.0141,
+    "lng": 77.5620,
+    "contact": "9900112233",
+    "crops": ["Tomato"]
+  },
+  {
+    "id": 11,
+    "name": "Yelahanka Fruit Supply",
+    "address": "Yelahanka New Town",
+    "lat": 13.0840,
+    "lng": 77.5930,
+    "contact": "9845223344",
+    "crops": ["Banana"]
+  },
+  {
+    "id": 12,
+    "name": "Kengeri Mango Farms",
+    "address": "Kengeri Satellite Town",
+    "lat": 12.9142,
+    "lng": 77.4836,
+    "contact": "9988991122",
+    "crops": ["Mango"]
+  },
+  {
+    "id": 13,
+    "name": "Hebbal Rice Suppliers",
+    "address": "Hebbal Ring Road",
+    "lat": 13.0285,
+    "lng": 77.5898,
+    "contact": "9886054321",
+    "crops": ["Rice"]
+  },
+  {
+    "id": 14,
+    "name": "Sahakara Nagar Maize Traders",
+    "address": "Sahakara Nagar B Block",
+    "lat": 13.0371,
+    "lng": 77.5765,
+    "contact": "9745098745",
+    "crops": ["Maize"]
+  },
+  {
+    "id": 15,
+    "name": "Kanakapura Vegetable Hub",
+    "address": "Kanakapura Road",
+    "lat": 12.8455,
+    "lng": 77.5690,
+    "contact": "8800665544",
+    "crops": ["Tomato"]
+  },
+  {
+    "id": 16,
+    "name": "Bellandur Agro Mart",
+    "address": "Bellandur Main Road",
+    "lat": 12.9250,
+    "lng": 77.6820,
+    "contact": "9345234576",
+    "crops": ["Potato"]
+  },
+  {
+    "id": 17,
+    "name": "Marathahalli Fruit & Veg Point",
+    "address": "Marathahalli Bridge Area",
+    "lat": 12.9744,
+    "lng": 77.7367,
+    "contact": "9012346578",
+    "crops": ["Mango"]
+  },
+  {
+    "id": 18,
+    "name": "Bangalore East Banana Traders",
+    "address": "Bangalore East Main Road",
+    "lat": 12.9800,
+    "lng": 77.6500,
+    "contact": "9523456780",
+    "crops": ["Banana"]
+  },
+  {
+    "id": 19,
+    "name": "Bangalore West Rice Depot",
+    "address": "Bangalore West",
+    "lat": 12.9700,
+    "lng": 77.5800,
+    "contact": "9345123499",
+    "crops": ["Rice"]
+  },
+  {
+    "id": 20,
+    "name": "Indiranagar Maize Yard",
+    "address": "Indiranagar 1st Stage",
+    "lat": 12.9718,
+    "lng": 77.6412,
+    "contact": "9645234123",
+    "crops": ["Maize"]
+  }
 ]

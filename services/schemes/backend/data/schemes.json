@@ -1,0 +1,222 @@
+[
+  {
+    "id": "s001",
+    "name": "PM-KISAN (Pradhan Mantri Kisan Samman Nidhi)",
+    "category": "farmers",
+    "eligibility": "Small and marginal farmers owning cultivable land.",
+    "benefits": "₹6000 annual financial assistance.",
+    "process": "Apply online or through local agriculture department.",
+    "documents": ["Aadhar Card", "Land Records", "Bank Passbook"],
+    "contact": "Local Agriculture Department",
+    "link": "https://pmkisan.gov.in"
+  },
+  {
+    "id": "s002",
+    "name": "Karnataka Raitha Vidya Nidhi Scholarship",
+    "category": "students",
+    "eligibility": "Children of farmers studying in school/college.",
+    "benefits": "Educational scholarship amount varies by class.",
+    "process": "Apply on SSP Karnataka portal.",
+    "documents": ["Aadhar", "Farmers ID", "Student Certificate"],
+    "contact": "Department of Agriculture, Karnataka",
+    "link": "https://ssp.postmatric.karnataka.gov.in"
+  },
+  {
+    "id": "s003",
+    "name": "Balika Samriddhi Yojana",
+    "category": "children",
+    "eligibility": "Girl children from BPL households.",
+    "benefits": "Cash incentives for girl child education.",
+    "process": "Apply via Anganwadi centers.",
+    "documents": ["Birth Certificate", "Aadhar", "Income Certificate"],
+    "contact": "Women & Child Development",
+    "link": "https://wcd.nic.in/schemes"
+  },
+  {
+    "id": "s004",
+    "name": "Samarth Scheme for Women Empowerment (Karnataka)",
+    "category": "women",
+    "eligibility": "All women in Karnataka.",
+    "benefits": "Skill training and livelihood support.",
+    "process": "Apply through Karnataka Skill Development portal.",
+    "documents": ["Aadhar", "Address Proof"],
+    "contact": "KSDC",
+    "link": "https://ksdc.karnataka.gov.in"
+  },
+  {
+    "id": "s005",
+    "name": "Indira Gandhi National Widow Pension Scheme (IGNWPS)",
+    "category": "widows",
+    "eligibility": "Widows aged 40–79 from low-income households.",
+    "benefits": "Monthly pension assistance.",
+    "process": "Apply via state pension portal.",
+    "documents": ["Death Certificate", "Aadhar", "Income Certificate"],
+    "contact": "Social Welfare Dept",
+    "link": "https://nsap.nic.in"
+  },
+  {
+    "id": "s006",
+    "name": "National Social Assistance Programme – Old Age Pension",
+    "category": "senior citizens",
+    "eligibility": "Age 60+, below poverty line.",
+    "benefits": "Monthly pension.",
+    "process": "Apply via state social security portal.",
+    "documents": ["Aadhar", "Age Proof", "Income Certificate"],
+    "contact": "Social Justice Dept",
+    "link": "https://nsap.nic.in"
+  },
+  {
+    "id": "s007",
+    "name": "Sugamya Pustakalaya Scheme",
+    "category": "physically disabled",
+    "eligibility": "Persons with disabilities.",
+    "benefits": "Accessible online library content.",
+    "process": "Register online.",
+    "documents": ["Disability Certificate", "Aadhar"],
+    "contact": "Department of Empowerment of PwDs",
+    "link": "https://library.daisyindia.org"
+  },
+  {
+    "id": "s008",
+    "name": "PM Kusum Solar Pump Yojana",
+    "category": "farmers",
+    "eligibility": "Farmers with agricultural land.",
+    "benefits": "Subsidy for solar pumps.",
+    "process": "Apply online.",
+    "documents": ["Land Documents", "Aadhar"],
+    "contact": "MNRE",
+    "link": "https://pmnny.gov.in/kusum"
+  },
+  {
+    "id": "s009",
+    "name": "Karnataka Mathru Poorna Scheme",
+    "category": "women",
+    "eligibility": "Pregnant & lactating women of Karnataka.",
+    "benefits": "Nutritional meal support.",
+    "process": "Apply via Anganwadi centers.",
+    "documents": ["Aadhar", "Pregnancy Card"],
+    "contact": "Women & Child Development Dept",
+    "link": "https://anganwadirecruit.kar.nic.in"
+  },
+  {
+    "id": "s010",
+    "name": "National Means-cum-Merit Scholarship (NMMS)",
+    "category": "students",
+    "eligibility": "Students from Class 8 with merit.",
+    "benefits": "₹12,000 annual scholarship.",
+    "process": "Apply via NSP portal.",
+    "documents": ["Income Certificate", "Aadhar", "Marksheet"],
+    "contact": "Ministry of Education",
+    "link": "https://scholarships.gov.in"
+  },
+  {
+    "id": "s011",
+    "name": "Niramaya Health Insurance for Disabled",
+    "category": "physically disabled",
+    "eligibility": "Persons with disabilities.",
+    "benefits": "Up to ₹1 lakh health insurance.",
+    "process": "Apply online.",
+    "documents": ["Disability Certificate", "Aadhar"],
+    "contact": "National Trust of India",
+    "link": "https://thenationaltrust.gov.in"
+  },
+  {
+    "id": "s012",
+    "name": "Beti Bachao Beti Padhao",
+    "category": "children",
+    "eligibility": "All girl children.",
+    "benefits": "Support for girl education & welfare.",
+    "process": "Apply through WCD department.",
+    "documents": ["Birth Certificate", "Aadhar"],
+    "contact": "Ministry of Women & Child Development",
+    "link": "https://wcd.nic.in/bbbp-schemes"
+  },
+  {
+    "id": "s013",
+    "name": "Atal Pension Yojana",
+    "category": "senior citizens",
+    "eligibility": "Aged 18–40 years.",
+    "benefits": "Guaranteed monthly pension.",
+    "process": "Apply via bank/post office.",
+    "documents": ["Aadhar", "Bank Account"],
+    "contact": "PFRDA",
+    "link": "https://www.npscra.nsdl.co.in"
+  },
+  {
+    "id": "s014",
+    "name": "Pradhan Mantri Matru Vandana Yojana",
+    "category": "women",
+    "eligibility": "Pregnant & lactating mothers.",
+    "benefits": "₹5000 maternity benefit.",
+    "process": "Apply online.",
+    "documents": ["Aadhar", "Bank Passbook"],
+    "contact": "WCD Ministry",
+    "link": "https://pmmvy.wcd.gov.in"
+  },
+  {
+    "id": "s015",
+    "name": "Krishi Bhagya Karnataka",
+    "category": "farmers",
+    "eligibility": "Farmers in dry regions of Karnataka.",
+    "benefits": "Support for water conservation and farming tools.",
+    "process": "Apply via state agriculture portal.",
+    "documents": ["Aadhar", "Land Records"],
+    "contact": "Agriculture Dept",
+    "link": "https://raitamitra.karnataka.gov.in"
+  },
+  {
+    "id": "s016",
+    "name": "Mid-Day Meal Scheme",
+    "category": "children",
+    "eligibility": "Government school students.",
+    "benefits": "Free nutritious meal at school.",
+    "process": "Automatic enrollment.",
+    "documents": ["School ID"],
+    "contact": "Education Dept",
+    "link": "https://mdm.nic.in"
+  },
+  {
+    "id": "s017",
+    "name": "Vidya Siri Scholarship Karnataka",
+    "category": "students",
+    "eligibility": "SC/ST students in Karnataka.",
+    "benefits": "Hostel and scholarship support.",
+    "process": "Apply on SSP portal.",
+    "documents": ["Caste Certificate", "Income Certificate"],
+    "contact": "Backward Classes Welfare Dept",
+    "link": "https://ssp.postmatric.karnataka.gov.in"
+  },
+  {
+    "id": "s018",
+    "name": "Karnataka Disability Pension",
+    "category": "physically disabled",
+    "eligibility": "40% or more disability.",
+    "benefits": "Monthly financial assistance.",
+    "process": "Apply online.",
+    "documents": ["Disability Certificate", "Aadhar"],
+    "contact": "Dept of Empowerment of PwDs",
+    "link": "https://sevasindhu.karnataka.gov.in"
+  },
+  {
+    "id": "s019",
+    "name": "National Widow Pension Scheme – Karnataka",
+    "category": "widows",
+    "eligibility": "Widows from low-income households.",
+    "benefits": "Monthly financial support.",
+    "process": "Apply through Seva Sindhu portal.",
+    "documents": ["Death Certificate", "Aadhar"],
+    "contact": "Women & Child Development",
+    "link": "https://sevasindhu.karnataka.gov.in"
+  },
+  {
+    "id": "s020",
+    "name": "Vriddhashrama Grant Scheme Karnataka",
+    "category": "senior citizens",
+    "eligibility": "Senior citizens requiring shelter.",
+    "benefits": "Old age home support.",
+    "process": "Apply via Social Welfare Dept.",
+    "documents": ["Aadhar", "Age Proof"],
+    "contact": "Social Welfare Dept",
+    "link": "https://swd.karnataka.gov.in"
+  }
+]
