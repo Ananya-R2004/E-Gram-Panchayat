@@ -3,6 +3,7 @@ import { Users, Target, Shield, Award } from "lucide-react";
 
 // The 'stats' array is kept, but its rendering is removed.
 // You could remove the array too, but keeping it for now is harmless.
+// Removed: stats rendering block in the JSX below.
 const stats = [
   { icon: Users, label: "Active Members", value: "10,000+" },
   { icon: Target, label: "Services Delivered", value: "50,000+" },

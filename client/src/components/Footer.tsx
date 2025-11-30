@@ -1,6 +1,6 @@
 import { Facebook, Twitter, Instagram, Youtube } from "lucide-react";
 import logoImage from "@assets/logo-egram_1761904001695.jpg";
-
+// Footer Component
 export default function Footer() {
   const currentYear = new Date().getFullYear();
 

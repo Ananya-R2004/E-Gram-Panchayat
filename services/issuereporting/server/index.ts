@@ -10,7 +10,12 @@ dotenv.config();
 const app = express();
 
 // Middlewares
-app.use(cors({ origin: "http://localhost:5173", credentials: true }));
+app.use(
+  cors({
+    origin: "http://localhost:5178", // UPDATED CLIENT PORT
+    credentials: true
+  })
+);
 app.use(express.json());
 
 // MongoDB connection
@@ -21,10 +26,10 @@ mongoose
 
 // API routes
 app.use("/api/issues", issueRoutes);
-app.use("/api/admin", adminAuthRouter); // ✅ MOUNT ADMIN ROUTE
+app.use("/api/admin", adminAuthRouter);
 
 // Start server
-const PORT = process.env.PORT || 5000;
+const PORT = process.env.PORT || 5001;
 app.listen(PORT, () =>
   console.log(`[express] 🚀 Server running at http://localhost:${PORT}`)
 );

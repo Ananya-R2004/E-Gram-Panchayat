@@ -1,6 +1,6 @@
 import { Card } from "@/components/ui/card";
 import { GraduationCap, Heart, Sprout, FileText, AlertCircle } from "lucide-react";
-
+// Services data
 const services = [
   {
     icon: GraduationCap,

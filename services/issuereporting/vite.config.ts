@@ -4,10 +4,8 @@ import path from "path";
 import runtimeErrorOverlay from "@replit/vite-plugin-runtime-error-modal";
 
 export default defineConfig({
-  plugins: [
-    react(),
-    runtimeErrorOverlay(),
-  ],
+  plugins: [react(), runtimeErrorOverlay()],
+
   resolve: {
     alias: {
       "@": path.resolve(import.meta.dirname, "client", "src"),
@@ -15,20 +13,26 @@ export default defineConfig({
       "@assets": path.resolve(import.meta.dirname, "attached_assets"),
     },
   },
+
   root: path.resolve(import.meta.dirname, "client"),
+
   build: {
     outDir: path.resolve(import.meta.dirname, "dist/public"),
     emptyOutDir: true,
   },
+
   server: {
+    port: 5178, // UPDATED FINAL CLIENT PORT
+    strictPort: true,
+
     fs: {
       strict: true,
       deny: ["**/.*"],
     },
-    // ✅ Proxy ensures frontend API calls go to backend automatically
+
     proxy: {
       "/api": {
-        target: "http://localhost:5000",
+        target: "http://localhost:5001", // BACKEND 5001
         changeOrigin: true,
         secure: false,
       },

@@ -1,19 +1,32 @@
-// client/src/pages/services/HealthcarePage.tsx
-import React from 'react';
-import Navbar from "../../components/Navbar";
-import Footer from "../../components/Footer";
+import React, { useState } from "react";
 
-export default function HealthcarePage() {
+const HealthcarePage = () => {
+  const [loading, setLoading] = useState(true);
+
   return (
-    <>
-      <Navbar />
-      <div className="pt-20 p-8 max-w-7xl mx-auto">
-        <h1 className="text-4xl font-bold mb-4 text-red-600">Healthcare Services</h1>
-        <p className="text-lg text-muted-foreground">
-          Welcome to the Healthcare Services module. This content has been successfully routed!
-        </p>
-        <a href="/services" className="text-primary hover:underline block mt-4">Back to Services</a>
-      </div>
-    </>
+    <div className="min-h-screen bg-background flex flex-col">
+      {loading && (
+        <div className="absolute inset-0 flex items-center justify-center bg-background z-10">
+          <p className="text-lg text-muted-foreground animate-pulse">
+            Loading Healthcare Service...
+          </p>
+        </div>
+      )}
+
+      <iframe
+        src="http://localhost:3005/"
+        title="Healthcare Service"
+        className="flex-1 w-full border-none"
+        style={{
+          height: "calc(100vh - 64px)",
+          overflow: "auto",
+          zIndex: 0,
+        }}
+        loading="lazy"
+        onLoad={() => setLoading(false)}
+      ></iframe>
+    </div>
   );
-}
+};
+
+export default HealthcarePage;

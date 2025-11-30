@@ -6,10 +6,10 @@ import { Mail } from "lucide-react"; // Keeping Mail for email icon
 import { useToast } from "@/hooks/use-toast";
 
 const teamEmails = [
-    "abhiniprojects7@gmail.com",
-    "ananyarajesh2112@gmail.com",
-    "akshayshivaramu@gmail.com",
-    "alokkumar29042005@gmail.com",
+    "1am23cd010@amceducation.in",
+    "1am23cd003@amceducation.in",
+    "1am23cd007@amceducation.in",
+    "1am23cd035@amceducation.in"
 ];
 
 // Removed state and handleSubmit since the form is gone.
