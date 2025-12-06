@@ -6,27 +6,50 @@ Web solution to bridge the rural digital divide — online Gram Sabha meetings, 
 1. Clone repo:
    `git clone https://github.com/Ananya-R2004/E-Gram-Panchayat.git`
 
-# Interface team branch
-`git checkout -b feature/interface`
+Terminal 1 — Main Web App
+npm run dev
 
-`git push -u origin feature/interface`
+Terminal 2 — Video Interface
+cd videointerface
+npm run dev
 
-# Switch back to main
-`git checkout main`
+Terminal 3 — Education Service (VillageLearningHub)
+cd services
+cd education
+cd VillageLearningHub
+npm run dev
 
-# Video call team branch
-`git checkout -b feature/video-call`
-`git push -u origin feature/video-call`
+Terminal 4 — Issue Reporting Service
+cd services
+cd issuereporting
+npm run dev
 
-# Services branch (later)
-`git checkout main`
+Terminal 5 — Agriculture Service
 
-`git checkout -b feature/services`
-`git push -u origin feature/services`
+Note: agriculture does not have a dev script. You use:
 
-# Back to main
-`git checkout main`
+cd services
+cd agriculture
+npm install
+npm start
 
+Terminal 6 — Healthcare Service
+cd services
+cd healthcare
+npm install
+npm start
+
+Terminal 7 — Schemes Service
+
+Install once:
+
+cd services
+cd schemes
+npm install npm-run-all
+
+Run:
+
+npm run start-all
 
 ## Branch strategy
 - `main` default — production/integration only
